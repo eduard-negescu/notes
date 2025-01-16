@@ -1,0 +1,12 @@
+{
+    "name": "eduard-negescu/notes_app",
+    "description": "A simple app to take notes",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Eduard Negescu",
+            "email": "eduardnegescu@gmail.com"
+        }
+    ],
+    "require": {}
+}
