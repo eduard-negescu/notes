@@ -10,6 +10,6 @@ PHP, Postgres, Docker, PDO, GD
 
 ## Installation
 * Run *compose install* to install dependencies/
-* Run *docker-compose up* or *podman-compose up* to create a postgres container for testing.
+* Run *docker-compose up -d* or *podman-compose up -d* to create a postgres container for testing.
 * Run ./init_db.sh if you are on Linux or, maybe Mac, to initialize the db with the users and notes tables and the admin user. It might work on the latter too. If you are on Windows ¯\\_(ツ)_/¯.
 * Run *php -S localhost:8000* in the src folder, or set up nginx or apache with php-fpm... or use XAMPP, or MAMP, or WAMP...
