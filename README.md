@@ -6,7 +6,7 @@ Simple Notes Web App written in PHP, using a PostgreSQL DB.
 * Admnin Page accesable at /admin.php. You have to be logged in as a user with admin role.
 
 ## Used technology
-php, postgres, docker, pdo
+PHP, Postgres, Docker, PDO, GD
 
 ## Installation
 * Run *compose install* to install dependencies/
