@@ -2,7 +2,6 @@
 session_start();
 require 'db.php';
 
-// Verifică dacă utilizatorul este autentificat
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit();
@@ -11,13 +10,11 @@ if (!isset($_SESSION['user_id'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST['title'];
     $content = $_POST['content'];
-    $priority = $_POST['priority'];  // Get the priority value
+    $priority = $_POST['priority'];
     $user_id = $_SESSION['user_id'];
 
-    // Conectează-te la baza de date
     $db = getDB();
 
-    // Pregătește și execută interogarea pentru a adăuga notița
     $stmt = $db->prepare("INSERT INTO notes (user_id, title, content, priority) VALUES (:user_id, :title, :content, :priority)");
     $stmt->bindParam(':user_id', $user_id);
     $stmt->bindParam(':title', $title);
@@ -34,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 
 <!DOCTYPE html>
-<html lang="ro" data-bs-theme="dark">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
