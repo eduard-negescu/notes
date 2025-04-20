@@ -1,7 +1,12 @@
 {
-    "name": "eduard-negescu/notes_app",
-    "description": "A simple app to take notes",
+    "name": "eduard/notes_app",
+    "description": "A simple application for taking Notes.",
     "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Eduard\\NotesApp\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Eduard Negescu",
